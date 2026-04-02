@@ -18,14 +18,14 @@ export function TermsOfService() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-zinc-900">1. Aceptación de los Términos</h2>
           <p>
-            Al acceder y utilizar CV Optimizer AI, usted acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo con alguna parte de estos términos, no podrá acceder ni utilizar nuestro servicio.
+            Al acceder y utilizar Optimiza tu CV, usted acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo con alguna parte de estos términos, no podrá acceder ni utilizar nuestro servicio.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-zinc-900">2. Descripción del Servicio</h2>
           <p>
-            CV Optimizer AI es una herramienta basada en inteligencia artificial que ayuda a los usuarios a mejorar, formatear y optimizar sus currículums vitae (CV) para roles específicos. El servicio se proporciona "tal cual" y "según disponibilidad".
+            Optimiza tu CV es una herramienta basada en inteligencia artificial que ayuda a los usuarios a mejorar, formatear y optimizar sus currículums vitae (CV) para roles específicos. El servicio se proporciona "tal cual" y "según disponibilidad".
           </p>
         </section>
 
@@ -44,7 +44,7 @@ export function TermsOfService() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-zinc-900">4. Limitación de Responsabilidad (Resultados de IA)</h2>
           <p>
-            <strong>Aviso importante:</strong> Los currículums generados por CV Optimizer AI son creados mediante modelos de lenguaje de inteligencia artificial (Google Gemini). Aunque nos esforzamos por ofrecer resultados de alta calidad:
+            <strong>Aviso importante:</strong> Los currículums generados por Optimiza tu CV son creados mediante modelos de lenguaje de inteligencia artificial (Google Gemini). Aunque nos esforzamos por ofrecer resultados de alta calidad:
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li>No garantizamos la precisión, veracidad o idoneidad del contenido generado.</li>
@@ -57,7 +57,7 @@ export function TermsOfService() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-zinc-900">5. Propiedad Intelectual</h2>
           <p>
-            Usted retiene todos los derechos sobre la información original que proporciona. El diseño, código fuente y estructura de la aplicación CV Optimizer AI son propiedad exclusiva de sus creadores.
+            Usted retiene todos los derechos sobre la información original que proporciona. El diseño, código fuente y estructura de la aplicación Optimiza tu CV son propiedad exclusiva de sus creadores.
           </p>
         </section>
 

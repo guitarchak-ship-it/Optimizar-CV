@@ -18,7 +18,7 @@ export function PrivacyPolicy() {
         <section className="space-y-3">
           <h2 className="text-xl font-bold text-zinc-900">1. Información que recopilamos</h2>
           <p>
-            En CV Optimizer AI, recopilamos la información que usted proporciona directamente al utilizar nuestro servicio. Esto incluye el texto de su currículum, archivos subidos (PDF/DOCX), su rol objetivo y cualquier otra información que ingrese en los campos del formulario para optimizar su CV.
+            En Optimiza tu CV, recopilamos la información que usted proporciona directamente al utilizar nuestro servicio. Esto incluye el texto de su currículum, archivos subidos (PDF/DOCX), su rol objetivo y cualquier otra información que ingrese en los campos del formulario para optimizar su CV.
           </p>
         </section>
 

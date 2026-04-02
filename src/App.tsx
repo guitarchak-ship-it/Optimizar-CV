@@ -308,7 +308,7 @@ export default function App() {
             <div className="w-8 h-8 bg-zinc-900 rounded-lg flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
-            <span className="font-bold text-xl tracking-tight">CV Optimizer AI</span>
+            <span className="font-bold text-xl tracking-tight">Optimiza tu CV</span>
           </div>
           {page === 'home' && step !== 'input' && step !== 'processing' && (
             <button 
@@ -907,7 +907,7 @@ export default function App() {
 
       <footer className="py-8 border-t border-zinc-200 bg-white">
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center text-zinc-400 text-sm">
-          <p>© 2026 CV Optimizer AI. Potenciado por Gemini.</p>
+          <p>© 2026 Optimiza tu CV. Potenciado por Gemini.</p>
           <div className="flex gap-6">
             <button onClick={() => setPage('privacy')} className="hover:text-zinc-600 transition-colors">Privacidad</button>
             <button onClick={() => setPage('terms')} className="hover:text-zinc-600 transition-colors">Términos</button>
