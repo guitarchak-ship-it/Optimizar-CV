@@ -201,7 +201,9 @@ body {
 }
 
 .minimal-content p {
-  @apply mb-4 border-b border-black/10 pb-2;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
 }
 
 .template-elegant {

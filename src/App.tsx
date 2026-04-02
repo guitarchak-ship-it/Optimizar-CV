@@ -682,27 +682,35 @@ export default function App() {
                     ref={mainCvRef}
                     className={cn(
                       "bg-white rounded-2xl border border-zinc-200 shadow-sm min-h-[600px] relative print:shadow-none print:border-none printable-cv",
-                      template === 'minimal' && "p-8 markdown-body",
+                      template === 'minimal' && "p-0",
                       template === 'elegant' && "p-0 template-elegant",
                       template === 'bold' && "p-0 template-bold"
                     )}
                   >
                     {template === 'minimal' ? (
-                      <>
-                        {input.photoBase64 && (
-                          <div 
-                            className="absolute top-8 right-8 w-24 h-24 rounded-lg border-2 border-zinc-100 shadow-sm print:border-zinc-200"
-                            style={{ 
-                              backgroundImage: `url(${input.photoBase64})`,
-                              backgroundSize: 'cover',
-                              backgroundPosition: 'center',
-                              backgroundRepeat: 'no-repeat'
-                            }}
-                            aria-label="Profile"
-                          />
-                        )}
-                        <ReactMarkdown>{result.finalDocument}</ReactMarkdown>
-                      </>
+                      <div className="flex flex-col">
+                        <div className="p-10 flex justify-between items-start border-b-2 border-black mb-4">
+                          <div className="space-y-2">
+                            <h1 className="text-4xl font-bold text-black">{result.name}</h1>
+                            <p className="text-zinc-600 font-medium text-lg uppercase tracking-wider">{input.targetRole}</p>
+                          </div>
+                          {input.photoBase64 && (
+                            <div 
+                              className="w-32 h-32 rounded-xl border-2 border-zinc-200 shrink-0"
+                              style={{ 
+                                backgroundImage: `url(${input.photoBase64})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat'
+                              }}
+                              aria-label="Profile"
+                            />
+                          )}
+                        </div>
+                        <div className="px-10 pb-10 markdown-body minimal-content">
+                          <ReactMarkdown>{result.finalDocument}</ReactMarkdown>
+                        </div>
+                      </div>
                     ) : template === 'elegant' ? (
                       <div className="flex flex-col">
                         <div className="bg-slate-950 text-white p-10 flex justify-between items-center template-banner">
