@@ -411,11 +411,14 @@ export default function App() {
                     onChange={(e) => setInput({ ...input, cvText: e.target.value })}
                   />
                   <div className="p-4 bg-zinc-50 border-t border-zinc-200 flex justify-between items-center">
-                    <span className="text-xs text-zinc-400 font-medium uppercase tracking-wider">
-                      {input.cvText.length} caracteres
+                    <span className={cn(
+                      "text-xs font-medium uppercase tracking-wider",
+                      input.cvText.length < 150 ? "text-amber-600" : "text-zinc-400"
+                    )}>
+                      {input.cvText.length} caracteres {input.cvText.length < 150 && "(mínimo 150 requeridos)"}
                     </span>
                     <button
-                      disabled={!input.cvText.trim() || extracting}
+                      disabled={input.cvText.trim().length < 150 || extracting}
                       onClick={handleNext}
                       className="bg-zinc-900 text-white px-6 py-2 rounded-full font-medium flex items-center gap-2 hover:bg-zinc-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                     >
