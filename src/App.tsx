@@ -32,6 +32,7 @@ import * as pdfjs from 'pdfjs-dist';
 import { AdBanner } from './components/AdBanner';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TermsOfService } from './components/TermsOfService';
+import { About } from './components/About';
 
 // Set up PDF.js worker using the local package worker
 const pdfWorker = new URL('pdfjs-dist/build/pdf.worker.mjs', import.meta.url).href;
@@ -43,7 +44,7 @@ function cn(...inputs: ClassValue[]) {
 
 type Step = 'input' | 'details' | 'processing' | 'result';
 type Template = 'minimal' | 'elegant' | 'bold';
-type Page = 'home' | 'privacy' | 'terms';
+type Page = 'home' | 'privacy' | 'terms' | 'about';
 
 export default function App() {
   const [page, setPage] = useState<Page>('home');
@@ -325,6 +326,7 @@ export default function App() {
       <main className="flex-1 max-w-5xl mx-auto w-full px-6 py-12">
         {page === 'privacy' && <PrivacyPolicy />}
         {page === 'terms' && <TermsOfService />}
+        {page === 'about' && <About />}
         
         {page === 'home' && (
           <>
@@ -906,9 +908,10 @@ export default function App() {
       </main>
 
       <footer className="py-8 border-t border-zinc-200 bg-white">
-        <div className="max-w-5xl mx-auto px-6 flex justify-between items-center text-zinc-400 text-sm">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-400 text-sm">
           <p>© 2026 Optimiza tu CV. Potenciado por Gemini.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            <button onClick={() => setPage('about')} className="hover:text-zinc-600 transition-colors">Acerca de</button>
             <button onClick={() => setPage('privacy')} className="hover:text-zinc-600 transition-colors">Privacidad</button>
             <button onClick={() => setPage('terms')} className="hover:text-zinc-600 transition-colors">Términos</button>
           </div>
